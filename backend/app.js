@@ -1,3 +1,8 @@
+/* The `dotenv.config()` method is called to load the environment
+variables from the `.env` file into the `process.env` object.*/
+const dotenv = require("dotenv");
+dotenv.config();
+
 /* importing the Express.js framework and configuring it to use JSON as the data 
 format for incoming requests.*/
 const express = require('express');
@@ -7,11 +12,6 @@ app.use(express.json());
 const helmet = require("helmet");
 
 const path = require("path");
-
-/* The `dotenv.config()` method is called to load the environment
-variables from the `.env` file into the `process.env` object.*/
-const dotenv = require("dotenv");
-dotenv.config();
 
 /* This code is connecting the Node.js application to a MongoDB database using the Mongoose library.*/
 const mongoose = require('mongoose');
@@ -30,7 +30,7 @@ const sauceRoutes = require("./routes/sauces");
 a security feature implemented by web browsers that restricts web pages from making requests to a
 different domain than the one that served the page.*/
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', process.env.ALLOW_CORS_URL);
+  res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   next();
