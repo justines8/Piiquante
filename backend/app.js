@@ -45,5 +45,3 @@ app.use("/api/auth/", userRoutes);
 app.use("/api/sauces", sauceRoutes);
 
 module.exports = app;
-
-/*justine*/
