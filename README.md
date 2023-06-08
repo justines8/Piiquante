@@ -15,6 +15,7 @@ Le front-end de l'application a été développé à l'aide d'Angular et a été
 
 ```
 cd backend
+npm install
 npm run dev
 ```
 
