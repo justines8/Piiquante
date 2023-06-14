@@ -15,6 +15,7 @@ Le front-end de l'application a été développé à l'aide d'Angular et a été
 
 ```
 cd backend
+npm install
 npm run dev
 ```
 
@@ -44,3 +45,12 @@ npm run start
 -  Un plugin Mongoose doit assurer la remontée des erreurs issues de la base de données.
 - Les versions les plus récentes des logiciels sont utilisées avec des correctifs de sécurité actualisés.
 - Le contenu du dossier images ne doit pas être téléchargé sur GitHub.
+
+## Variables d'environnement 
+
+- DB_MAIL : adresse mail utilisée pour accéder à la base MongoDB
+- DB_PASS : mot de passe utilisé pour accéder à la base MongoDB
+- DB_CLUSTER : cluster de la base MongoDB
+- DB_TEST : test de la base MongoDB
+- AUTH_TOKEN : jeton d'authentification pour la connexion
+- URL_FRONT : URL du front 
